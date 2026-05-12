@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
-
-// 69A final
+// 69A printingf version
 using namespace std;
 
 int main () {
@@ -9,25 +8,24 @@ int main () {
   int n_2;
   int total = 0;
   const int xyz = 3;
-  vector<int> coordinate;
 
   cin >> n;
 
   for (int i = 0; i < n; i++) {
+    vector<int> coordinate[n];
     for (int j = 0; j < xyz; j++) {
       cin >> n_2;
-      coordinate.push_back(n_2);
+      cout << "input: " << n_2 << endl;
+      coordinate[n].push_back(n_2);
     }
-
-    total += accumulate(coordinate.begin(), coordinate.end(), 0);
-    coordinate.clear();
   }
 
-  if (total == 0) {
-    cout << "YES" << endl;
-  } else {
-    cout << "NO" << endl;
-  }
+  
+  // if (total == 0) {
+  //   cout << "YES" << endl;
+  // } else {
+  //   cout << "NO" << endl;
+  // }
 
   return 0;
 }
