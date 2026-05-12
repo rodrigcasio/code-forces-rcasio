@@ -7,13 +7,13 @@ int main () {
   int n;
   int n_2;
   int total = 0;
-
+  const int xyz = 3;
   vector<int> coordinate;
 
   cin >> n;
 
   for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
+    for (int j = 0; j < xyz; j++) {
       cin >> n_2;
       cout << "input: " << n_2 << endl;
       coordinate.push_back(n_2);
