@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+// 69A
 using namespace std;
 
 int main () {
@@ -7,19 +7,22 @@ int main () {
   int n;
   int n_2;
   int total = 0;
+  vector<int> coordinate;
 
   cin >> n;
 
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
       cin >> n_2;
-      total += n_2;
+      cout << n_2 << endl;
+      coordinate.push_back(n_2);
+      total += accumulate(coordinate.begin(), coordinate.end(), 0);
     }
   }
   
   if (total == 0) {
     cout << "YES" << endl;
-  } else if (total > 0 || total < 0) {
+  } else {
     cout << "NO" << endl;
   }
 
@@ -27,6 +30,8 @@ int main () {
 }
 
 /*
+ * logic:
+ *
  *  3 
  *  4 + 1 + 7 = 12
  *  -2 + 4 + -1 = 1
