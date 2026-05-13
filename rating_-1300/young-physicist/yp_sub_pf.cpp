@@ -8,43 +8,49 @@ int main () {
   int n_2;
   int total = 0;
   const int xyz = 3;
-
+  vector<int> sums = {0, 0, 0};
   cin >> n;
 
   for (int i = 0; i < n; i++) {
-    vector<int> coordinate[n];
     for (int j = 0; j < xyz; j++) {
       cin >> n_2;
       cout << "input: " << n_2 << endl;
-      coordinate[n].push_back(n_2);
+      sums[j] += n_2;
+      cout << "sums -" << j << "-: "<< sums[j] << endl;
     }
   }
-
   
-  // if (total == 0) {
-  //   cout << "YES" << endl;
-  // } else {
-  //   cout << "NO" << endl;
-  // }
+  if (sums[0] == 0 && sums[1] == 0 && sums[2] == 0) {
+    cout << "YES" << endl;
+  } else {
+    cout << "NO" << endl;
+  }
 
+  cout << "coordinates: " << endl;
+  for (const int& a : sums) {
+    cout << a;
+  }
+  
   return 0;
 }
 
 /*
  * logic:
  *
- *  3 
- *  4 + 1 + 7 = 12
- *  -2 + 4 + -1 = 1
- *  1 + -5 + -3 = -7
+ * 3 (number of list of x-y-z);
+ * x | y | z
  *
- *  = 6 = NO
+ *  4  | 1 | 7
+ * -2  | 4 | -1   +
+ *  1  |-5 | -3
+ * --------------
+ * 3  | 0 |  3   = NO
  *
  * 3
- * 3 + (-1) + 7 = 9
- * (-5) + 2 + (-4) = -7
- * 2 + (-1) + (-3) = - -2
+ *  3  | -1 | 7
+ * -5  | 2 | -4   +
+ *  2  |-1 | -3
+ * --------------
+ *  0 | 0 |  0   = YES
  * 
- * = 0 = YES
- *
  * */
