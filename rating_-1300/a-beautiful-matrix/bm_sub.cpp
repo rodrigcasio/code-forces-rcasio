@@ -20,22 +20,13 @@ int main () {
         value_i = i;
         value_j = j;
 
-        cout << "New position: "  << value_i << value_j << endl;
-        // mustBreak = true;
-        // break;
+        arr[i][j] = 0;
+
+        cout << "saved position in value_i & value_j: "  << value_i << value_j << endl;
       }
     }
-    // if (mustBreak) break;
   }
   
-  for (int z = 0; z <= size; z++) {
-    for (int w = 0; w <= size; w++) {
-      cout << arr[z][w] << " ";
-    }
-    cout << endl;
-  }
-  
-
   while (value_i != 2) {
     if (value_i < 2) {
       value_i++;
@@ -55,13 +46,22 @@ int main () {
       swap++;
     }
   }
-
+  
+  arr[value_i][value_j] = 1;
   
   cout << "value of value_i: " << value_i << endl;
   cout << "value of value_j: " << value_j << endl;
   cout << "value of swap: " << swap << endl;
 
-  cout << "stop";
+  cout << "stop" << endl;
+
+  for (int z = 0; z <= size; z++) {
+    for (int w = 0; w <= size; w++) {
+      cout << arr[z][w] << " ";
+    }
+    cout << endl;
+  }
+  
   return 0;
 }
 
