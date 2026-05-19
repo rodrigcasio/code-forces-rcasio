@@ -8,6 +8,8 @@ int main () {
   int const size = 4;
   bool mustBreak = false;
 
+  int value_i, value_j;
+
   for (int i = 0; i <= size; i++) {
     for (int j = 0; j <= size; j++) {
       cin >> arr[i][j];
@@ -15,34 +17,15 @@ int main () {
 
       if (arr[i][j] == 1) {
         cout << "Position " << i << j << "= " << arr[i][j] << endl;
-        
-        while (i != 2 || j != 2) {
-          if (i < 2) {
-            i++;
-            swap++;
-          } else {
-            i--;
-            swap++;
-          }
+        value_i = i;
+        value_j = j;
 
-          if (j < 2) {
-            j++;
-            swap++;
-          } else {
-            j--;
-            swap++;
-          }
-        }
-
-        cout << "New position: "  << i << j << endl;
-        cout << "Swap count: " << swap << endl;
-        mustBreak = true;
-        break;
+        cout << "New position: "  << value_i << value_j << endl;
+        // mustBreak = true;
+        // break;
       }
     }
-    if (mustBreak) break;
-
-
+    // if (mustBreak) break;
   }
   
   for (int z = 0; z <= size; z++) {
@@ -51,6 +34,32 @@ int main () {
     }
     cout << endl;
   }
+  
+
+  while (value_i != 2) {
+    if (value_i < 2) {
+      value_i++;
+      swap++;
+    } else if (value_i > 2) {
+      value_i--;
+      swap++;
+    }
+  }
+  
+  while (value_j != 2) {
+    if (value_j < 2) {
+      value_j++;
+      swap++;
+    } else if (value_j > 2) {
+      value_j--;
+      swap++;
+    }
+  }
+
+  
+  cout << "value of value_i: " << value_i << endl;
+  cout << "value of value_j: " << value_j << endl;
+  cout << "value of swap: " << swap << endl;
 
   cout << "stop";
   return 0;
@@ -173,6 +182,24 @@ then change the value
     }
   }
 
+        while (i != 2 || j != 2) {
+          if (valueI < 2) {
+            valueI++;
+            swap++;
+            cout << "value of swap: " << swap << endl;
+          } else {
+            valueI--;
+            swap++;
+          }
+
+          if (valueJ < 2) {
+            valueJ++;
+            swap++;
+          } else {
+            valueJ--;
+            swap++;
+          }
+        }
 
 
 */
