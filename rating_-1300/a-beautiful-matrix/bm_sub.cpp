@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+// printfing version
 using namespace std;
 
 int main () {
@@ -6,7 +7,6 @@ int main () {
   int arr[5][5];
   int swap = 0;
   int const size = 4;
-  bool mustBreak = false;
 
   int value_i, value_j;
 
@@ -53,7 +53,6 @@ int main () {
   cout << "value of value_j: " << value_j << endl;
   cout << "value of swap: " << swap << endl;
 
-  cout << "stop" << endl;
 
   for (int z = 0; z <= size; z++) {
     for (int w = 0; w <= size; w++) {
