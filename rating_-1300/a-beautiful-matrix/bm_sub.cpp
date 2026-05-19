@@ -6,7 +6,7 @@ int main () {
   int arr[5][5];
   int swap = 0;
   int const size = 4;
-  // bool mustBreak = false;
+  bool mustBreak = false;
 
   for (int i = 0; i <= size; i++) {
     for (int j = 0; j <= size; j++) {
@@ -15,33 +15,34 @@ int main () {
 
       if (arr[i][j] == 1) {
         cout << "Position " << i << j << "= " << arr[i][j] << endl;
-        // mustBreak = true;
-        // break;
-      }
-    }
-    // if (mustBreak) break;
-  }
-
-// thought before closing 12:13 15/5 : 
-// save the position of where the 1, turn it into 0 and
-// count the numbers of additions and subtracions needed to move to the middle
-// then change the value
-
-  for (int p = 0; p <= size; p++) {
-    for (int r = 0; r <= size; r++) {
-      if (arr[p][r] != arr[2][2]) {
-        while (arr[p][r] != arr[2][2]) {
-          switch (p) {
-            case 0:{ p += 2; swap += 1; break; }
-            case 1:{ p += 1; swap += 1; break; }
-            case 2:{ p = 2; swap += 1; break; }
-            case 3:{ p -= 1; swap += 1; break; }
-            case 4:{ p -= 2; swap += 1; break; }
+        
+        while (i != 2 || j != 2) {
+          if (i < 2) {
+            i++;
+            swap++;
+          } else {
+            i--;
+            swap++;
           }
-          cout << "changed to: " << arr[p][r] << "value swap: " << swap << endl;
+
+          if (j < 2) {
+            j++;
+            swap++;
+          } else {
+            j--;
+            swap++;
+          }
         }
+
+        cout << "New position: "  << i << j << endl;
+        cout << "Swap count: " << swap << endl;
+        mustBreak = true;
+        break;
       }
     }
+    if (mustBreak) break;
+
+
   }
   
   for (int z = 0; z <= size; z++) {
@@ -147,4 +148,31 @@ Logic
     j -= 2; swap += 1; break;
   }
  }
+
+
+
+thought before closing 12:13 15/5 : 
+save the position of where the 1, turn it into 0 and
+count the numbers of additions and subtracions needed to move to the middle
+then change the value
+
+  for (int p = 0; p <= size; p++) {
+    for (int r = 0; r <= size; r++) {
+      if (arr[p][r] != arr[2][2]) {
+        while (arr[p][r] != arr[2][2]) {
+          switch (p) {
+            case 0:{ p += 2; swap += 1; break; }
+            case 1:{ p += 1; swap += 1; break; }
+            case 2:{ p = 2; swap += 1; break; }
+            case 3:{ p -= 1; swap += 1; break; }
+            case 4:{ p -= 2; swap += 1; break; }
+          }
+          cout << "changed to: " << arr[p][r] << "value swap: " << swap << endl;
+        }
+      }
+    }
+  }
+
+
+
 */
