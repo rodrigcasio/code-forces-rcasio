@@ -24,8 +24,15 @@ int main () {
 
   test -
   5 1
+  
+  1  2  3  4  5 (t) 
   B, G, G, B, G
-
+  
+  G  B  G  B, G
+  
+  
+  
+  
   
   time 1
   
