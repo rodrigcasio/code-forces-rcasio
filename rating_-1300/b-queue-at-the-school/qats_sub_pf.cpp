@@ -25,10 +25,17 @@ int main () {
   test -
   5 1
   
+  0  1  2  3  4
+
   1  2  3  4  5 (t) 
   B, G, G, B, G
+    
+  G  B  G  G  B  
   
-  G  B  G  B, G
+  G  B  G  G, B
+  
+
+  B G G B 
   
   
   
