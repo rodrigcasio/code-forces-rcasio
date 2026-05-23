@@ -12,17 +12,29 @@ int main () {
   char arr[n];
   for (int i = 0; i < n; i++) {
     cin >> arr[i];
-    if (!x) { 
-      if (arr[i] == 'G' && arr[i - 1] == 'B') {
-        temp = arr[i];
-        arr[i] = arr[i - 1];
-        arr[i - 1] = temp;
-        bool = true;
-      }
+  }
+
+  for (int j = 0; j < n; j++) {
+    if (arr[j] == 'B' && arr[j + 1] == 'G') {
+      temp = arr[j];
+      arr[j] = arr[j + 1];
+      arr[j + 1] = temp;
+      printf("New value for position arr[%d] = %c\n", j, arr[j]);
+      printf("New value for position arr[%d + 1] = %c\n", j, arr[j + 1]);
+      j++;
     }
   }
 
-
+    // x = false;
+    // cin >> arr[i];
+    // if (!x) { 
+    //   if (arr[i] == 'G' && arr[i - 1] == 'B') {
+    //     temp = arr[i];
+    //     arr[i] = arr[i - 1];
+    //     arr[i - 1] = temp;
+    //     x = true;
+    //   }
+    // }
   
   
       // while (arr[i] == 'G') {
