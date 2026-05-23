@@ -13,15 +13,17 @@ int main () {
   for (int i = 0; i < n; i++) {
     cin >> arr[i];
   }
-
-  for (int j = 0; j < n; j++) {
-    if (arr[j] == 'B' && arr[j + 1] == 'G') {
-      temp = arr[j];
-      arr[j] = arr[j + 1];
-      arr[j + 1] = temp;
-      printf("New value for position arr[%d] = %c\n", j, arr[j]);
-      printf("New value for position arr[%d + 1] = %c\n", j, arr[j + 1]);
-      j++;
+  
+  for (int i = 0; i < t; i++) {
+    for (int j = 0; j < n; j++) {
+      if (arr[j] == 'B' && arr[j + 1] == 'G') {
+        temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        printf("New value for position arr[%d] = %c\n", j, arr[j]);
+        printf("New value for position arr[%d + 1] = %c\n", j, arr[j + 1]);
+        j++;
+      }
     }
   }
 
