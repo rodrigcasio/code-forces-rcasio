@@ -6,7 +6,6 @@ int main () {
   
   int n;
   int n_2;
-  int total = 0;
   const int xyz = 3;
   vector<int> sums = {0, 0, 0};
   
