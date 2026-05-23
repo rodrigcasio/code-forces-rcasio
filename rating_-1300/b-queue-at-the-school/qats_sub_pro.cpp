@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> // 266B improved version
 using namespace std;
 
 int main () {
