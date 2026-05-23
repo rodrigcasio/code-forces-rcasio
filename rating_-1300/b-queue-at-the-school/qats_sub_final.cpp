@@ -33,3 +33,20 @@ int main () {
 
   return 0;
 }
+
+/*
+
+  Logic
+
+  n = number of children 
+  t = time
+  
+  5 1
+  B, G, G, B, G 
+  G, B, G, G, B
+  
+  from second 0 to 1 need to be changed simultaneously
+  every swap, we jump to the next iteration past the kid just swapped.
+  
+
+*/
