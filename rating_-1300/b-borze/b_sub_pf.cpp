@@ -8,13 +8,15 @@ int main () {
   
   for (int i = 0; i < s.size(); i++) {
     if (s[i] == '.') {
-      if (s[i + 1] == '-') {
+      if (s[i + 1] == '-' || s[i + 1] == '.') {
         cout << 0;
       }
+
     } else if (s[i] == '-') {
+
       if (s[i + 1] == '.') {
-       cout << 1; 
-      } else {
+        cout << 1; 
+      } else if (s[i + 1] == '-'){
         cout << 2;
       }
     } 
