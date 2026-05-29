@@ -9,15 +9,15 @@ int main () {
   for (int i = 0; i < s.size(); i++) {
     if (s[i] == '.') {
       if (s[i + 1] == '-' || s[i + 1] == '.') {
-        cout << 0;
+        cout << 0 << "-im here (0)" << endl;
       }
 
     } else if (s[i] == '-') {
 
       if (s[i + 1] == '.') {
-        cout << 1; 
+        cout << 1 << "-here (1)" << endl; 
       } else if (s[i + 1] == '-'){
-        cout << 2;
+        cout << 2 << "-here (2)" << endl;
       }
     } 
   }
