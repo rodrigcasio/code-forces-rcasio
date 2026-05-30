@@ -7,19 +7,19 @@ int main () {
   cin >> s;
   
   for (int i = 0; i < s.size(); i++) {
-    if (s[i] == '.') {
-      if (s[i + 1] == '-' || s[i + 1] == '.') {
-        cout << 0 << "-im here (0)" << endl;
-      }
-
-    } else if (s[i] == '-') {
-
-      if (s[i + 1] == '.') {
-        cout << 1 << "-here (1)" << endl; 
-      } else if (s[i + 1] == '-'){
-        cout << 2 << "-here (2)" << endl;
-      }
-    } 
+    if (s[i] == '.' && s[i + 1] == '-') {
+      cout << 0 << endl;
+      i++;
+      cout << "new value of i: " << i << endl;
+    } else if (s[i] == '.' && s[i - 1] == '-' && s[i]) {
+      cout << 1 << endl;
+      i++;
+      cout << "new value of i: " << i << endl;
+    } else if (s[i] == '-' && s[i - 1] == '-') {
+      cout << 2 << endl;
+      i++;
+      cout << "new value of i: " << i << endl;
+    }
   }
 
 
