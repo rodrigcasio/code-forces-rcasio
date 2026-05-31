@@ -1,26 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// .-.--
+
 int main () {
 
   string s;
   cin >> s;
   
   for (int i = 0; i < s.size(); i++) {
-    if (s[i] == '.') {
-      if (s[i + 1] == '-' || s[i + 1] == '.') {
-        cout << 0 << "-im here (0)" << endl;
+    while (s[i] == '.') {
+      if (s[i + 1] == '-' || s[i + 1] == '\0') {
+        cout << "value i = " << i << "| value of next i + 1: " << s[i+1] << endl;
+        cout << 0 << endl;
+        break;
+      } else if (s[i + 1] == '.' || s[i + 1] == '\0') {
+        cout << "value i = " << i << "| value of next i + 1: " << s[i+1] << endl;
+        cout << 0 << endl;
+        break;
+      } else if (s[i - 1] == '-') {
+        cout << "value i = " << i << "| previous value i - 1: " << s[i-1] << endl;
+        cout << 1 << endl;
       }
+      i++;
+      break;
+    }
 
-    } else if (s[i] == '-') {
-
+    while (s[i] == '-') {
       if (s[i + 1] == '.') {
-        cout << 1 << "-here (1)" << endl; 
-      } else if (s[i + 1] == '-'){
-        cout << 2 << "-here (2)" << endl;
+        cout << "value i = " << i << "| value of next i + 1: " << s[i+1] << endl;
+        cout << 1 << endl;
+      } else if (s[i + 1] == '-' || s[i - 1] == '-') {
+        cout << 2 << endl;
+        cout << "value i = " << i << "| value of next i + 1: " << s[i+1] << endl;
       }
-    } 
+      i++;
+      break;
+    }
   }
+
+  cout << endl;
 
 
   return 0;
@@ -28,6 +47,37 @@ int main () {
 
 
 /*
+
+    while (s[i] == '-') {
+      if (s[i + 1] == '.') {
+        cout << 1;
+      } else if (s[i + 1] == '-') {
+        cout << 2;
+      } else {
+        cout << 0;
+      }
+    }
+
+    while (s[i] == '.') {
+      if (s[i + 1] == '.' || s[i - 1] == '-') {
+        cout << 0;
+        break;
+      }
+    }
+    if (s[i] == '.' && s[i + 1] == '-') {
+      cout << 0 << endl;
+      i++;
+      cout << "new value of i: " << i << endl;
+    } else if (s[i] == '.' && s[i - 1] == '-' && s[i]) {
+      cout << 1 << endl;
+      i++;
+      cout << "new value of i: " << i << endl;
+    } else if (s[i] == '-' && s[i - 1] == '-') {
+      cout << 2 << endl;
+      i++;
+      cout << "new value of i: " << i << endl;
+    }
+
 
 Logic:
 
