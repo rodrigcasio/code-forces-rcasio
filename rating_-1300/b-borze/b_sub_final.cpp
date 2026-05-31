@@ -10,6 +10,7 @@ int main () {
     while (s[i] == '.') {
       if (s[i + 1] == '-' || s[i + 1] == '.' || s[i + 1] == '\0') {
         cout << 0;
+        break;
       } else if (s[i - 1] == '-') {
         cout << 1;
       }
