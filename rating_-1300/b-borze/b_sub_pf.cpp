@@ -13,9 +13,14 @@ int main () {
       if (s[i + 1] == '-' || s[i + 1] == '\0') {
         cout << "value i = " << i << "| value of next i + 1: " << s[i+1] << endl;
         cout << 0 << endl;
+        break;
+      } else if (s[i + 1] == '.' && s[i + 2] == '.') {
+        cout << 0;
+        break;
       } else if (s[i + 1] == '.' || s[i + 1] == '\0') {
         cout << "value i = " << i << "| value of next i + 1: " << s[i+1] << endl;
         cout << 0 << endl;
+        break;
       } else if (s[i - 1] == '-') {
         cout << "value i = " << i << "| previous value i - 1: " << s[i-1] << endl;
         cout << 1 << endl;
