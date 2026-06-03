@@ -4,6 +4,38 @@ using namespace std;
 int main () {
 
   int y;
+  int u = 0;
+  int x = 1;
+
+  cin >> y;
+  int z = y;
+
+  while (y != 0) {
+    y /= 10;
+
+    u++;
+  }
+
+  // cout << u << endl;
+
+  for (int i = 0; i < u; i++) {
+    z = x +;
+
+    x *= 10;
+  }
+
+  cout << z << endl;
+
+  return 0;
+}
+
+/*
+
+    aproach from school project % 9 (using % operator to limit each digit from 0 t 9)
+    if (isupper(caracter)) {
+        res[i] = ((caracter - 'A' + clave) % 26) + 'A';
+
+  int y;
   int x = 0;
   int z = 1;
   int u = 0;
@@ -25,10 +57,7 @@ int main () {
 
   cout << "Total value: " << u << endl;
 
-  return 0;
-}
-
-/*
+-- 
 
   int y;
   int x = 0;
