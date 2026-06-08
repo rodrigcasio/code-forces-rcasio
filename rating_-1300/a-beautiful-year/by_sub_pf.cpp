@@ -4,6 +4,83 @@ using namespace std;
 int main () {
 
   int y, z;
+  int temp;
+  const int YEARS = 4;
+  vector<int> digits;
+  cin >> y;
+
+  while (y != 0) {
+    temp = y % 10;
+    y /= 10;
+
+    digits.insert(digits.begin(), temp); 
+  }
+
+  for (int i = 0; i < YEARS; i++) {
+    z = digits[i];
+
+    auto it = find(digits.begin(), digits.end(), z);
+    static_cast<int> (it);
+    cout << it << endl;
+    int index = it - digits.begin();
+
+      switch (index) {
+        case 0: { digits[i] += 1; } break;
+        case 1: { digits[i] += 1; } break;
+        case 2: { digits[i] += 1; } break;
+        case 3: { digits[i] += 1; } break;
+      }
+      cout << "Vector modified" << endl;
+      i--;
+  }
+
+  for (const int& d : digits) {
+    cout << d;
+  }
+
+  cout << endl;
+  return 0;
+}
+
+/*
+  
+   1 9 8 7
+ 
+
+
+
+
+
+ ---- new aproach
+  [1, 9, 8, 7]
+
+  int temp;
+  while (y != 0) {
+    temp = y % 10;
+    y /= 10;
+    
+    digits.insert(digits.begin(), temp);
+  }
+  
+  temp = digits[i];
+  auto it = find(digits.begin(), digits.end(), temp);
+  
+  int index = 0;
+  if (it) {
+    index = distance(digits.begin(), it);
+    
+    switch (index) {
+      case 0: { digits[i] += 1; } break;
+      case 1: { digits[i] += 1; } break;
+      case 2: { digits[i] += 1; } break;
+      case 3: { digits[i] += 1; } break;
+    }
+    cout << "vector modified" << endl;
+    i--;
+  }
+
+---- 
+  int y, z;
   int temp = 0;
   int prev = 0;
   int u = 0;
@@ -19,7 +96,16 @@ int main () {
     y /= 10;
 
     prev = temp;
+    digits.insert(digits.begin(), temp);
 
+    cout << "y = " << y << endl;
+    cout << "temp = " << temp << endl;
+    
+    u++;
+  }
+
+
+-----
     if (temp == prev) {
       switch (u) {
         case 0: { z += 1; } break;
@@ -30,23 +116,6 @@ int main () {
       cout << "here" << endl;
     }
 
-    digits.insert(digits.begin(), temp);
-
-    cout << "y = " << y << endl;
-    cout << "temp = " << temp << endl;
-    
-    u++;
-  }
-
-  cout << z << endl;
-
-  for (const int& d : digits) {
-    cout << d << endl;
-  }
-  return 0;
-}
-
-/*
 
 correct logic:
 
