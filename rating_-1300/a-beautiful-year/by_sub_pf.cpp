@@ -3,25 +3,46 @@ using namespace std;
 
 int main () {
 
-  int y;
+  int y, z;
   int temp = 0;
+  int prev = 0;
+  int u = 0;
+
   vector<int> digits;
 
-  cin >> y;
+  cin >> y; 
+  z = y;
 
   while (y != 0) {
     
     temp = y % 10;
     y /= 10;
-    
-    
+
+    prev = temp;
+
+    if (temp == prev) {
+      switch (u) {
+        case 0: { z += 1; } break;
+        case 1: { z += 10; } break;
+        case 2: { z += 100; } break;
+        case 3: { z += 1000; } break;
+      }
+      cout << "here" << endl;
+    }
+
+    digits.insert(digits.begin(), temp);
+
     cout << "y = " << y << endl;
     cout << "temp = " << temp << endl;
-
     
+    u++;
   }
 
+  cout << z << endl;
 
+  for (const int& d : digits) {
+    cout << d << endl;
+  }
   return 0;
 }
 
