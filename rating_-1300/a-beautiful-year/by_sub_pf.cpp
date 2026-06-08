@@ -1,7 +1,37 @@
-#include <iostream>   // 271A
+#include <bits/stdc++.h>   // 271A
 using namespace std;
 
 int main () {
+
+  int y;
+  int temp = 0;
+  vector<int> digits;
+
+  cin >> y;
+
+  while (y != 0) {
+    
+    temp = y % 10;
+    y /= 10;
+    
+    
+    cout << "y = " << y << endl;
+    cout << "temp = " << temp << endl;
+
+    
+  }
+
+
+  return 0;
+}
+
+/*
+
+correct logic:
+
+1987
+   
+   first aproaches are incorrect:
 
   int y;
   int u = 0;
@@ -24,13 +54,8 @@ int main () {
     x *= 10;
   }
 
-  cout << z << endl;
 
-  return 0;
-}
-
-/*
-
+  
     aproach from school project % 9 (using % operator to limit each digit from 0 t 9)
     if (isupper(caracter)) {
         res[i] = ((caracter - 'A' + clave) % 26) + 'A';
