@@ -1,7 +1,127 @@
-#include <iostream>   // 271A
+#include <bits/stdc++.h>   // 271A
 using namespace std;
 
 int main () {
+
+  int y, z;
+  int temp;
+  const int YEARS = 4;
+  vector<int> digits;
+  cin >> y;
+
+  while (y != 0) {
+    temp = y % 10;
+    y /= 10;
+
+    digits.insert(digits.begin(), temp); 
+  }
+
+  for (int i = 0; i < YEARS; i++) {
+    z = digits[i];
+
+    auto it = find(digits.begin(), digits.end(), z);
+    static_cast<int> (it);
+    cout << it << endl;
+    int index = it - digits.begin();
+
+      switch (index) {
+        case 0: { digits[i] += 1; } break;
+        case 1: { digits[i] += 1; } break;
+        case 2: { digits[i] += 1; } break;
+        case 3: { digits[i] += 1; } break;
+      }
+      cout << "Vector modified" << endl;
+      i--;
+  }
+
+  for (const int& d : digits) {
+    cout << d;
+  }
+
+  cout << endl;
+  return 0;
+}
+
+/*
+  
+   1 9 8 7
+ 
+
+
+
+
+
+ ---- new aproach
+  [1, 9, 8, 7]
+
+  int temp;
+  while (y != 0) {
+    temp = y % 10;
+    y /= 10;
+    
+    digits.insert(digits.begin(), temp);
+  }
+  
+  temp = digits[i];
+  auto it = find(digits.begin(), digits.end(), temp);
+  
+  int index = 0;
+  if (it) {
+    index = distance(digits.begin(), it);
+    
+    switch (index) {
+      case 0: { digits[i] += 1; } break;
+      case 1: { digits[i] += 1; } break;
+      case 2: { digits[i] += 1; } break;
+      case 3: { digits[i] += 1; } break;
+    }
+    cout << "vector modified" << endl;
+    i--;
+  }
+
+---- 
+  int y, z;
+  int temp = 0;
+  int prev = 0;
+  int u = 0;
+
+  vector<int> digits;
+
+  cin >> y; 
+  z = y;
+
+  while (y != 0) {
+    
+    temp = y % 10;
+    y /= 10;
+
+    prev = temp;
+    digits.insert(digits.begin(), temp);
+
+    cout << "y = " << y << endl;
+    cout << "temp = " << temp << endl;
+    
+    u++;
+  }
+
+
+-----
+    if (temp == prev) {
+      switch (u) {
+        case 0: { z += 1; } break;
+        case 1: { z += 10; } break;
+        case 2: { z += 100; } break;
+        case 3: { z += 1000; } break;
+      }
+      cout << "here" << endl;
+    }
+
+
+correct logic:
+
+1987
+   
+   first aproaches are incorrect:
 
   int y;
   int u = 0;
@@ -24,13 +144,8 @@ int main () {
     x *= 10;
   }
 
-  cout << z << endl;
 
-  return 0;
-}
-
-/*
-
+  
     aproach from school project % 9 (using % operator to limit each digit from 0 t 9)
     if (isupper(caracter)) {
         res[i] = ((caracter - 'A' + clave) % 26) + 'A';
