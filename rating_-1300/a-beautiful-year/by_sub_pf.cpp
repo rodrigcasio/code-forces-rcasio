@@ -3,19 +3,66 @@ using namespace std;
 
 int main () {
 
+  // idk aaaa
+
+  return 0;
+
+}
+
+/*
+  
+   1 9 8 7
+  1988
+  1989
+  ...
+  ...
+  2013
+
+  
+
+  1 9 8 7
+
+  / 1000 = 1
+  y /= 10;
+  
+  / 100 = 9
+  
+  / 1000
+  / 100
+  / 10
+  / 1
+ 
   int y, z;
   int temp;
-  const int YEARS = 4;
+  const int YEARS = 3;
   vector<int> digits;
+
   cin >> y;
+
+  for (int i = 0; i < YEARS; i++) {
+    if (y != 0) {
+      z = y /= 10;
+      cout << z << endl;
+    }
+  }
+
+
+  for (const int& d : digits) {
+    cout << d;
+  }
+
+  cout << endl;
+
 
   while (y != 0) {
     temp = y % 10;
     y /= 10;
+    
+    cout << temp << " - " << y << endl;
 
     digits.insert(digits.begin(), temp); 
   }
-
+ 
   for (int i = 0; i < YEARS; i++) {
     z = digits[i];
 
@@ -33,19 +80,6 @@ int main () {
       cout << "Vector modified" << endl;
       i--;
   }
-
-  for (const int& d : digits) {
-    cout << d;
-  }
-
-  cout << endl;
-  return 0;
-}
-
-/*
-  
-   1 9 8 7
- 
 
 
 
