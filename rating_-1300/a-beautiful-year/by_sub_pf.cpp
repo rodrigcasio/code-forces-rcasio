@@ -1,9 +1,16 @@
-#include <bits/stdc++.h>   // 271A
+#include <bits/stdc++.h> 
+#include <iostream> // 271A
 using namespace std;
 
 int main () {
 
-  // idk aaaa
+
+  int a;
+  
+  cin >> a;
+
+  cout << a % 10 << "\n";
+    
 
   return 0;
 
@@ -17,7 +24,9 @@ int main () {
   ...
   ...
   2013
+  
 
+  
   
 
   1 9 8 7
