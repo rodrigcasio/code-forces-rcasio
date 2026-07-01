@@ -1,10 +1,29 @@
-// #include <bits/stdc++.h> 
-#include <iostream> // 271A
+#include <bits/stdc++.h>   // 271A
 using namespace std;
 
 int main () {
   
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
+  int y;
+  int temp;
+  vector<int> year;
+
+  cin >> y;
+
+  while (y != 0) {
+    temp = y % 10;
+    year.insert(year.begin(), temp);
+
+    y /= 10;
+  }
+
+  for (const int& n : year) {
+    cout << n << '\n';
+  }
+  
+  
   return 0;
 
 }
@@ -17,22 +36,10 @@ int main () {
   ...
   ...
   2013
-<<<<<<< HEAD
   
-  29-06 aproach
-  
-  if (a % 10 != b % 10 != c !)
-  
-  
-  
+  ---
   
 ---
-=======
-  
-
-  
-  
->>>>>>> origin/a-b
 
   1 9 8 7
 
