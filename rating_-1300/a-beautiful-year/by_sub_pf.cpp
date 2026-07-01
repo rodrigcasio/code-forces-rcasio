@@ -2,9 +2,9 @@
 using namespace std;
 
 int main () {
+  
 
-  // idk aaaa
-
+  
   return 0;
 
 }
@@ -17,8 +17,15 @@ int main () {
   ...
   ...
   2013
-
   
+  29-06 aproach
+  
+  if (a % 10 != b % 10 != c !)
+  
+  
+  
+  
+---
 
   1 9 8 7
 
