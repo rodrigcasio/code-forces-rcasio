@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>   // 271A
+// #include <bits/stdc++.h> 
+#include <iostream> // 271A
 using namespace std;
 
 int main () {
   
 
-  
   return 0;
 
 }
@@ -17,6 +17,7 @@ int main () {
   ...
   ...
   2013
+<<<<<<< HEAD
   
   29-06 aproach
   
@@ -26,6 +27,12 @@ int main () {
   
   
 ---
+=======
+  
+
+  
+  
+>>>>>>> origin/a-b
 
   1 9 8 7
 
