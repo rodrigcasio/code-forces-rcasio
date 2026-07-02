@@ -16,7 +16,7 @@ int main () {
     c = ((y/100) % 10);
     d = ((y/1000) % 10);
     
-    if (a != b && a != b && a != c && a != d && b != c && b != d && c != d) {
+    if (a != b && a != c && a != d && b != c && b != d && c != d) {
       cout << y << "\n";
       break;
     } else {
