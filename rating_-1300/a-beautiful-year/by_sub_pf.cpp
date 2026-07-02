@@ -6,23 +6,47 @@ int main () {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
+  // int a, b, c, d;
   int y;
-  int temp;
-  vector<int> year;
-
+  // bool des = true;
   cin >> y;
+  ++y;
+  // a = (y % 10);
+  // b = ((y/10) % 10);
+  // c = ((y/100) % 10);
+  // d = ((y/1000) % 10);
 
-  while (y != 0) {
-    temp = y % 10;
-    year.insert(year.begin(), temp);
-
-    y /= 10;
+  while (true) {
+    if ((y % 10) != ((y/10) % 10) &&
+        (y % 10) != ((y/100) % 10) && 
+        (y % 10) != ((y/1000) % 10) &&
+        ((y/10) % 10) != ((y/100) % 10) &&
+        ((y/10) % 10) != ((y/1000) % 10) && 
+        ((y/100) % 10) != ((y/1000) % 10)) {
+      cout << y << "\n";
+      break;
+    } else {
+      ++y;
+      cout << y << "\n";
+    }
   }
 
-  for (const int& n : year) {
-    cout << n << '\n';
-  }
   
+  
+  // while (des) {
+  //   if (a != b && a != c && a != d && b != c && b != d && c != d) {
+  //     cout << y << "\n";
+  //     des = false;
+  //   } else {
+  //     ++y;
+  //     a = (a + 1) % 10;
+  //     b = (b + 1) % 10;
+  //     c = (c + 1) % 10;
+  //     d = (c + 1) % 10;
+  //     cout << y << "\n";
+  //   }
+  // }
+
   
   return 0;
 
@@ -37,6 +61,10 @@ int main () {
   ...
   2013
   
+  // (y % 10) = 7
+  // ((y/10) % 10) = 8
+  // ((y/100) % 10) = 9
+  // ((y/1000) % 10) = 1
   ---
   
 ---
