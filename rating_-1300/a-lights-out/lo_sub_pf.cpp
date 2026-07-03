@@ -15,9 +15,9 @@ int main () {
       
       if (x % 2 == 0) {
         if (x == 1) {
-          arr[i][j] == 0;
+          arr[i][j] = 0;
         } else {
-          arr[i][j] == 1;
+          arr[i][j] = 1;
         }
       }
       cout << arr[i][j];
