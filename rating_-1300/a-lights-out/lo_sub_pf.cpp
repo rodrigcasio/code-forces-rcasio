@@ -2,6 +2,7 @@
 using namespace std;
 
 int main () {
+  int arr[3][3] = {0};
   
   ios::sync_with_stdio(0);
   cin.tie(0);
@@ -11,7 +12,15 @@ int main () {
   for (int i = 0; i <= 2; ++i) {
     for (int j = 0; j <= 2; ++j) {
       cin >> x;
-      cout << x;
+      
+      if (x % 2 == 0) {
+        if (x == 1) {
+          arr[i][j] == 0;
+        } else {
+          arr[i][j] == 1;
+        }
+      }
+      cout << arr[i][j];
     }
     cout << "\n";
   }
