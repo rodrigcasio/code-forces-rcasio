@@ -6,5 +6,6 @@
 
 a.out
 
-!*/
-!*.*
+# executables compiled 
+test
+solution
