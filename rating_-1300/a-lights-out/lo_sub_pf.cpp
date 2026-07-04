@@ -16,7 +16,28 @@ int main () {
       n = arr[i][j];
 
       if (i == 0 && j == 0) {
-        // -
+        if (x % 2) {
+          if (n == 0) {
+            arr[i][j] = 0;
+            arr[i][j+1] = 0;
+            arr[i+1][j] = 0;
+          } else {
+            arr[i][j] = 1;
+            arr[i][j+1] = 1;
+            arr[i+1][j] = 1;
+            
+          }
+        } else {
+            if (n == 0) {
+              arr[i][j] = 1;
+              arr[i][j+1] = 1;
+              arr[i+1][j] = 1;
+            } else {
+              arr[i][j] = 0;
+              arr[i][j+1] = 0;
+              arr[i+1][j] = 0;
+            }
+        }
 
       } else if (i == 0 && j == 1) {
         if (x % 2 == 0) {
@@ -46,8 +67,31 @@ int main () {
               arr[i][j-1] = 0;
             }
         }
-      } else if (i == 0 && j == 2) {
+      } 
 
+      else if (i == 0 && j == 2) {
+        if (x % 2 == 0) {
+          if (n == 0) {
+            arr[i][j] = 0;
+            arr[i][j-1] = 0;
+            arr[i+1][j] = 0;
+          } else {
+            arr[i][j] = 1;
+            arr[i][j-1] = 1;
+            arr[i+1][j] = 1;
+
+          }
+        } else {
+            if (n == 0) {
+              arr[i][j] = 1;
+              arr[i][j-1] = 1;
+              arr[i+1][j] = 1;
+            } else {
+                arr[i][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i+1][j] = 0;
+            }
+        }
 
       } else if (i == 1 && j == 0) {
           if (x % 2 == 0) {
@@ -77,6 +121,7 @@ int main () {
           
               }
           }
+
       } else if (i == 1 && j == 1) {
           if (x % 2 == 0) {
             if (n == 0) {
@@ -108,6 +153,7 @@ int main () {
                 arr[i][j+1] = 0;
               }
           }
+
       } else if (i == 1 && j == 2) {
           if (x % 2 == 0) {
             if (n == 0) {
@@ -134,8 +180,32 @@ int main () {
                 arr[i+1][j] = 0;
               }
           }
+
       } else if (i == 2 && j == 0) {
+          if (x % 2 == 0) {
+            if (n == 0) {
+              arr[i][j] = 0;
+              arr[i-1][j] = 0;
+              arr[i][j+1] = 0;
+            } else {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j+1] = 1;
+            }
+          } else {
+              if (n == 0) {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j+1] = 1;
+            
+              } else {
+                  arr[i][j] = 0;
+                  arr[i-1][j] = 0;
+                  arr[i][j+1] = 0;
+              }
+          }
         
+
       } else if (i == 2 && j == 1) {
           if (x % 2 == 0) {
             if (n == 0) {
@@ -163,7 +233,28 @@ int main () {
               }
           }
       } else if (i == 2 && j == 2) {
-        
+          if (x % 2 == 0) {
+            if (n == 0) {
+              arr[i][j] = 0;
+              arr[i][j-1] = 0;
+              arr[i-1][j] = 0;
+            } else {
+                arr[i][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i-1][j] = 1;
+            }
+          } else {
+              if (n == 0) {
+                arr[i][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i-1][j] = 1;
+              
+              } else {
+                  arr[i][j] = 0;
+                  arr[i][j-1] = 0;
+                  arr[i-1][j] = 0;
+              }
+          }
       }
 
       // if (x % 2 == 0) {
