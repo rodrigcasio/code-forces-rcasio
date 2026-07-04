@@ -146,14 +146,13 @@ int main () {
             if (x % 2 != 0) {
               if (arr[i][j] == 0) {
                 arr[i][j] = 1;
-                arr[i][j-1] = 1;
-                arr[i-1][j] = 1;
+                (arr[i][j-1] = 1 ? arr[i][j-1] = 0 : arr[i][j-1] = 1);
+                (arr[i-1][j] = 1 ? arr[i-1][j] = 0 : arr[i-1][j] = 1);
               
               } else {
-                  // cout << "-h  2.2 (arr=1)";
                   arr[i][j] = 0;
-                  arr[i][j-1] = 0;
-                  arr[i-1][j] = 0;
+                  (arr[i][j-1] = 0 ? arr[i][j-1] = 0 : arr[i][j-1] = 1);
+                  (arr[i-1][j] = 0 ? arr[i-1][j] = 0 : arr[i-1][j] = 1);
               }
             }
         }
