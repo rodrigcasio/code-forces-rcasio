@@ -7,88 +7,372 @@ int main () {
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  int x;
+  int x, n;
 
   for (int i = 0; i <= 2; ++i) {
     for (int j = 0; j <= 2; ++j) {
       cin >> x;
 
-      if (i == 0 && j == 1) {
+      n = arr[i][j];
+
+      if (i == 0 && j == 0) {
+        // -
+
+      } else if (i == 0 && j == 1) {
         if (x % 2 == 0) {
-          arr[i][j] = 0;
-          arr[i+1][j] = 0;
-          arr[i][j+1] = 0;
-          arr[i][j-1] = 0;
-        } else {
-          arr[i][j] = 1;
-          arr[i+1][j] = 1;
-          arr[i][j+1] = 1;
-          arr[i][j-1] = 1;
-        }
-      } else if (i == 1 && j == 0) {
-          if (x % 2 == 0) {
+          if (n == 0) {
             arr[i][j] = 0;
             arr[i+1][j] = 0;
-            arr[i-1][j] = 0;
             arr[i][j+1] = 0;
+            arr[i][j-1] = 0;
+
           } else {
             arr[i][j] = 1;
             arr[i+1][j] = 1;
-            arr[i-1][j] = 1;
             arr[i][j+1] = 1;
+            arr[i][j-1] = 1;
+          }
+        } else {
+            if (n == 0) {
+              arr[i][j] = 1;
+              arr[i+1][j] = 1;
+              arr[i][j+1] = 1;
+              arr[i][j-1] = 1;
+
+            } else {
+              arr[i][j] = 0;
+              arr[i+1][j] = 0;
+              arr[i][j+1] = 0;
+              arr[i][j-1] = 0;
+            }
+        }
+      } else if (i == 0 && j == 2) {
+
+
+      } else if (i == 1 && j == 0) {
+          if (x % 2 == 0) {
+            if (n == 0){
+              arr[i][j] = 0;
+              arr[i+1][j] = 0;
+              arr[i-1][j] = 0;
+              arr[i][j+1] = 0;
+            } else {
+              arr[i][j] = 1;
+              arr[i+1][j] = 1;
+              arr[i-1][j] = 1;
+              arr[i][j+1] = 1;
+            }
+          } else {
+              if (n == 0) {
+                arr[i][j] = 1;
+                arr[i+1][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j+1] = 1; 
+            
+              } else {
+                arr[i][j] = 0;
+                arr[i+1][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i][j+1] = 0;
+          
+              }
           }
       } else if (i == 1 && j == 1) {
           if (x % 2 == 0) {
-            arr[i][j] = 0;
-            arr[i-1][j] = 0;
-            arr[i+1][j] = 0;
-            arr[i][j-1] = 0;
-            arr[i][j+1] = 0;
+            if (n == 0) {
+              arr[i][j] = 0;
+              arr[i-1][j] = 0;
+              arr[i+1][j] = 0;
+              arr[i][j-1] = 0;
+              arr[i][j+1] = 0;
+  
+            } else {
+              arr[i][j] = 1;
+              arr[i-1][j] = 1;
+              arr[i+1][j] = 1;
+              arr[i][j-1] = 1;
+              arr[i][j+1] = 1;
+            }
           } else {
-            arr[i][j] = 1;
-            arr[i-1][j] = 1;
-            arr[i+1][j] = 1;
-            arr[i][j-1] = 1;
-            arr[i][j+1] = 1;
-          }       
+              if (n == 0) {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i+1][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i][j+1] = 1;
+              } else {
+                arr[i][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i+1][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i][j+1] = 0;
+              }
+          }
       } else if (i == 1 && j == 2) {
           if (x % 2 == 0) {
-            arr[i][j] = 0;
-            arr[i-1][j] = 0;
-            arr[i][j-1] = 0;
-            arr[i+1][j] = 0;
+            if (n == 0) {
+              arr[i][j] = 0;
+              arr[i-1][j] = 0;
+              arr[i][j-1] = 0;
+              arr[i+1][j] = 0;
+            } else {
+              arr[i][j] = 1;
+              arr[i-1][j] = 1;
+              arr[i][j-1] = 1;
+              arr[i+1][j] = 1;
+            }
           } else {
-            arr[i][j] = 0;
-            arr[i-1][j] = 0;
-            arr[i][j-1] = 0;
-            arr[i+1][j] = 0;
+              if (n == 0) {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i+1][j] = 1;
+              } else {
+                arr[i][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i+1][j] = 0;
+              }
           }
+      } else if (i == 2 && j == 0) {
+        
       } else if (i == 2 && j == 1) {
           if (x % 2 == 0) {
-            arr[i][j] = 0;
-            arr[i-1][j] = 0;
-            arr[i][j-1] = 0;
-            arr[i][j+1] = 0;
+            if (n == 0) {
+              arr[i][j] = 0;
+              arr[i-1][j] = 0;
+              arr[i][j-1] = 0;
+              arr[i][j+1] = 0;
+            } else {
+              arr[i][j] = 1;
+              arr[i-1][j] = 1;
+              arr[i][j-1] = 1;
+              arr[i][j+1] = 1;
+            }
           } else {
-            arr[i][j] = 1;
-            arr[i-1][j] = 1;
-            arr[i][j-1] = 1;
-            arr[i][j+1] = 1;
+              if (n == 0) {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i][j+1] = 1;
+              } else  {
+                arr[i][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i][j+1] = 0;
+              }
           }
+      } else if (i == 2 && j == 2) {
+        
       }
 
-      if (x % 2 == 0) {
-        if (x == 1) {
-          arr[i][j] = 0;
+      // if (x % 2 == 0) {
+      //   if (x == 1) {
+      //     arr[i][j] = 0;
+      //
+      //   } else {
+      //     arr[i][j] = 1;
+      //   }
+      // }
 
-        } else {
-          arr[i][j] = 1;
-        }
-      }
-      cout << arr[i][j];
+      cout << arr[i][j] << " ";
     }
     cout << "\n";
   }
 
   return 0;
 }
+
+
+
+/*
+
+-- aproach
+      if (i == 0 && j == 1) {
+        if (x % 2 == 0) {
+          switch (n) {
+            case 0: {
+              arr[i][j] = 0;
+              arr[i+1][j] = 0;
+              arr[i][j+1] = 0;
+              arr[i][j-1] = 0;
+              break;
+            }
+            case 1: {
+              arr[i][j] = 1;
+              arr[i+1][j] = 1;
+              arr[i][j+1] = 1;
+              arr[i][j-1] = 1;
+              break;
+            }
+          }
+        } else {
+            switch (n) {
+              case 0: {
+                arr[i][j] = 1;
+                arr[i+1][j] = 1;
+                arr[i][j+1] = 1;
+                arr[i][j-1] = 1;
+                break;
+              }
+              case 1: {
+                arr[i][j] = 0;
+                arr[i+1][j] = 0;
+                arr[i][j+1] = 0;
+                arr[i][j-1] = 0;
+                break;
+              }
+            }
+        }
+
+      } else if (i == 1 && j == 0) {
+          if (x % 2 == 0) {
+            switch (n) {
+              case 0: { 
+                arr[i][j] = 0;
+                arr[i+1][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i][j+1] = 0;
+                break;
+              }
+              case 1: {
+                arr[i][j] = 1;
+                arr[i+1][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j+1] = 1;
+                break;
+              }
+            }
+          } else {
+              switch (n) {
+                case 0: {
+                  arr[i][j] = 1;
+                  arr[i+1][j] = 1;
+                  arr[i-1][j] = 1;
+                  arr[i][j+1] = 1; 
+                  break;
+                }
+                case 1: {
+                  arr[i][j] = 0;
+                  arr[i+1][j] = 0;
+                  arr[i-1][j] = 0;
+                  arr[i][j+1] = 0;
+                  break;
+                }
+              }
+          }
+      } else if (i == 1 && j == 1) {
+          if (x % 2 == 0) {
+            switch (n) {
+              case 0: {
+                arr[i][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i+1][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i][j+1] = 0;
+                break;
+              }
+              case 1: {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i+1][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i][j+1] = 1;
+                break;
+              }
+            }
+          } else {
+            switch (n) {
+              case 0: {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i+1][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i][j+1] = 1;
+                break;
+              }
+              case 1: {
+                arr[i][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i+1][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i][j+1] = 0;
+                break;
+              }
+            }
+          }
+      } else if (i == 1 && j == 2) {
+          if (x % 2 == 0) {
+            switch (n) {
+              case 0: {
+                arr[i][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i+1][j] = 0;
+                break;
+              }
+              case 1: {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i+1][j] = 1;
+                break;
+              }
+            }
+          } else {
+              switch (n) {
+                case 0: {
+                  arr[i][j] = 1;
+                  arr[i-1][j] = 1;
+                  arr[i][j-1] = 1;
+                  arr[i+1][j] = 1;
+                  break;
+                }
+                case 1: {
+                  arr[i][j] = 0;
+                  arr[i-1][j] = 0;
+                  arr[i][j-1] = 0;
+                  arr[i+1][j] = 0;
+                  break;
+                }
+              }
+          }
+      } else if (i == 2 && j == 1) {
+          if (x % 2 == 0) {
+            switch (n) {
+              case 0: {
+                arr[i][j] = 0;
+                arr[i-1][j] = 0;
+                arr[i][j-1] = 0;
+                arr[i][j+1] = 0;
+                break;
+              }
+              case 1: {
+                arr[i][j] = 1;
+                arr[i-1][j] = 1;
+                arr[i][j-1] = 1;
+                arr[i][j+1] = 1;
+                break;
+              }
+            }
+          } else {
+              switch (n) {
+                case 0: {
+                  arr[i][j] = 1;
+                  arr[i-1][j] = 1;
+                  arr[i][j-1] = 1;
+                  arr[i][j+1] = 1;
+                  break;
+                }
+                case 1: {
+                  arr[i][j] = 0;
+                  arr[i-1][j] = 0;
+                  arr[i][j-1] = 0;
+                  arr[i][j+1] = 0;
+                  break;
+                }
+              }
+          }
+      }
+
+*/
