@@ -93,13 +93,6 @@ int main () {
     cout << "\n";
   }
   
-  // for (int r = 0; r <= 2; ++r) {
-  //   for (int c = 0; c <= 2; ++c) {
-  //     cout << arr[r][c];
-  //   }
-  //    cout << "\n";
-  // }
-
   return 0;
 }
 
